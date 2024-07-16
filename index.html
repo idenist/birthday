@@ -59,16 +59,20 @@
     <script>
         function Hint(n) {
             const hint = document.getElementById('hint'+n);
-            if(n == "1")    hint.innerText = "띄어쓰기 없이 9글자";
-            if(n == "8")    hint.innerText = "조OOOOOOOO";
-            if(n == "3")    hint.innerText = "O성OOOOOOO";
-            if(n == "5")    hint.innerText = "OO민OOOOOO";
-            if(n == "10")    hint.innerText = "OOO은OOOOO";
-            if(n == "7")    hint.innerText = "OOOO바OOOO";
-            if(n == "4")    hint.innerText = "OOOOO보OOO";
-            if(n == "2")    hint.innerText = "OOOOOO입OO";
-            if(n == "9")    hint.innerText = "OOOOOOO니O";
-            if(n == "6")    hint.innerText = "OOOOOOOO다";
+            if(!hint.innerText) {
+                if(n == "1")    hint.innerText = "띄어쓰기 없이 9글자";
+                if(n == "8")    hint.innerText = "조OOOOOOOO";
+                if(n == "3")    hint.innerText = "O성OOOOOOO";
+                if(n == "5")    hint.innerText = "OO민OOOOOO";
+                if(n == "10")    hint.innerText = "OOO은OOOOO";
+                if(n == "7")    hint.innerText = "OOOO바OOOO";
+                if(n == "4")    hint.innerText = "OOOOO보OOO";
+                if(n == "2")    hint.innerText = "OOOOOO입OO";
+                if(n == "9")    hint.innerText = "OOOOOOO니O";
+                if(n == "6")    hint.innerText = "OOOOOOOO다";
+            } else {
+                hint.innerText = "";
+            }
         }
 
         function checkAnswer() {
